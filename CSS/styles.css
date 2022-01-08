@@ -119,6 +119,7 @@ box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.5); /*no rgba, os 3 primeiros valor
 -webkit-box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.5);/*Explorer*/
 -moz-box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.5); /*Mozilla*/
  /*tudo dentro do bloco vai ser absolute, então deixei esse relative*/
+ position: relative;
 }
 
 .header-block .text{
