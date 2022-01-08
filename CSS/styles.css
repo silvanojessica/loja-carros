@@ -377,6 +377,57 @@ section .right h3 {
     nav ul li {
       display: none;
     }
+
+    .header-block img{
+        width: 70%;
+        position: absolute;
+        right: 16%;
+        top: 30%;
+    }
+
+    .header-block .text {
+        position: absolute;
+        bottom: 10%; /*altura do chao*/
+        left: 15%;
+    }
+
+    section .filter-card{
+      width: 390px;
+      padding: 0px 10px;  
+    }
+
+.search-input{
+    max-width: 700px;
+        min-width: 240px;
+}
+
+.about {
+    margin-top: 100px;
+}
+
+.title-wrapper-about{
+    margin-bottom: 20px;
+}
+
+.about-content{
+flex-direction: column;
+height: 100%;
+}
+
+.left{
+
+    display: none;
+}
+
+.right{
+    width: 90%;
+}
+
+.right p{
+    width: 100%;
+    margin: 0px;
+    text-align: left;
+}
     footer {
         height: 100%;
       }
