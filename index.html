@@ -1,0 +1,138 @@
+<!DOCTYPE html> <!--tipo do documento? HTML-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- codificação dos caracteres-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--compatibilidade entre navegadores-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--escala, pra nao ficar com zoom-->
+    <title>devcar</title> <!--títuloDoSite, que vai ficar escrito na aba-->
+    <link rel="stylesheet" href="CSS/styles.css"> <!--link + espaço gera sugestões--> 
+    <!--vou usar LiveServer para atualizar automaticamente no brownser-->
+</head>
+<body>
+   <!--começamos com a Header e, nela, uma classe content. se usar o Emmet, basta digitar [".content"+espaço]
+que ela cria a classe content dentro da tag header.
+nesse caso aqui, vai ter uma barra de navegação com logo e menu horizontal-->
+<header>
+    <div class="content">
+            <nav>
+            <!--dica pra logo sem img: usar tag p com class=brand e customizar-->
+                <p class="brand"><strong>Jessica</strong>Silvano</p>
+            <!--mas poderia haver uma imagem no lugar da tag p-->  
+
+            <!--ainda dentro da barra de navegação vai entrar a lista de menu
+                é importante remover o sublinhado e os marcadores (no css: text-decoration e list-style, ambos "none")-->
+                <ul> <!-- se eu digitar "li*3>a", 3 linhas com links serão criadas no documento-->
+                    <li><a href="#catalog">Catálogo</a></li>
+                    <li><a href="about"></a>Sobre</li>
+                    <li><a href="feature"></a>Recursos</li>
+                    
+                    <!--"li" é um item da lista e "a" é um link-->
+                    <button>Login</button>
+                    <!--no template tem um botão de login perto do menu-->
+                </ul>
+              <!--aqui acaba a barra de navegação do cabeçalho e iremos criar uma header block, que é um bloco
+            separado do menu, mas ainda na header-->  
+            </nav>
+            <!-- digitar ".header-block" pro Emmet criar a classe (funcionou) vai ser o bloco azul do template-->
+           
+            <div class="header-block">
+           <!--no template tem um texto e uma imagem dentro do bloco azul-->    
+                <div class="text">
+                    <h2>O carro perfeito pra você</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem esse minima libero.</p>
+                </div>
+            <!--ainda dentro do bloco azul na header tem uma imagem de carro, além do texto de call to action-->
+                <img src="imagens/car-header2.png" alt="imagem carro">
+           </div>
+
+            </div>
+            <!-- digitar lorem10 cria um texto fictício com 10 palavras-->
+    </div>
+</header>
+
+<!--hora do catálogo, daí vem a section-->
+
+<section class="catalog" id="catalog">
+    <div class="content"> <!--content deixa tudo alinhado-->
+        <div class="title-wrapper-catalog"> <!--esse title-wrapper irá se repetir-->
+            <p>Ache o que você deseja </p>
+            <h2>Catalogo</h2>
+        </div>
+        <div class="filter-card"> 
+            <input type="text" class="search-input" placeholder="Escolha seu modelo favorito">
+            <button class="search-button">Buscar</button>
+        </div>
+
+        <div class="card-wrapper"> <!--tipo o grid-->
+            <div class="card-item"> <!--é o card, propriamente dito, que vou repetir 6x-->
+                <img src="imagens/palio2.png" alt="carro1">
+                <!--embaixo da imagem tem o conteúdo-->
+                <div class="card-content">
+                    <h3>Fiat Palio 2014</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing.
+                        <button type="button">Quero este!</button>
+                    </p>
+                </div>
+            </div>
+
+            <div class="card-item"> <!--é o card, propriamente dito-->
+                <img src="imagens/peugeot2.png" alt="carro1">
+                <!--embaixo da imagem tem o conteúdo-->
+                <div class="card-content">
+                    <h3>Peugeot 207 2011</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing.
+                        <button type="button">Quero este!</button>
+                    </p>
+                </div>
+            </div>
+
+            <div class="card-item"> <!--é o card, propriamente dito-->
+                <img src="imagens/onix.png" alt="carro1">
+                <!--embaixo da imagem tem o conteúdo-->
+                <div class="card-content">
+                    <h3>Chevrolet Onix Joy 2016</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing.
+                        <button type="button">Quero este!</button>
+                    </p>
+                </div>
+            </div>
+
+            <div class="card-item"> <!--é o card, propriamente dito-->
+                <img src="imagens/fiesta.png" alt="carro1">
+                <!--embaixo da imagem tem o conteúdo-->
+                <div class="card-content">
+                    <h3>Ford Fiesta 2014</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing.
+                        <button type="button">Quero este!</button>
+                    </p>
+                </div>
+            </div>
+
+            <div class="card-item"> <!--é o card, propriamente dito-->
+                <img src="imagens/hb20.png" alt="carro1">
+                <!--embaixo da imagem tem o conteúdo-->
+                <div class="card-content">
+                    <h3>Hyundai HB20</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing.
+                        <button type="button">Quero este!</button>
+                    </p>
+                </div>
+            </div>
+
+            <div class="card-item"> <!--é o card, propriamente dito-->
+                <img src="imagens/logan.png" alt="carro1">
+                <!--embaixo da imagem tem o conteúdo-->
+                <div class="card-content">
+                    <h3>Renault Logan</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing.
+                        <button type="button">Quero este!</button>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+</body>
+</html>

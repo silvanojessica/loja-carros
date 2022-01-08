@@ -1,0 +1,259 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+/*procurar fonte desejada, clicar em "select this style" e depois selecionar a opção [x]IMPORT [] link 
+e copiar o import na caixinha que vai abrir*/
+
+
+/*resetando regras do CSS*/
+/*começar resetando configurações pré-estabelecidas
+antes de customizar, só com HTML puro, já tem padding, margin etc, então iremos redefinir usando o seletor * */
+
+* {
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+    outline: none;
+    font-family: "Roboto", sans-serif;
+    /*ctrl + / comenta */
+
+}
+
+/*definindo cores pra usar em qualquer lugar*/
+:root {
+    --orange:#f78b00;
+    --blue:#00285f;
+    --gray:#ededed;
+
+}
+
+html, body{
+    width: 100%;
+    overflow-x: hidden; /*isso faz sumir a barra de rolagem horizontal*/
+}
+
+header{
+width: 100%;
+height: 500px; /*heigh (altura) é px ; widht (largura) é %) */
+background: var(--orange);
+}
+
+/*abordagem responsiva: 
+se tiver espaço, vai ocupar o máximo/ se não tiver, ocupa o mínimo;
+é uma abordagem chamada mobile first*/
+.content {
+    max-width: 1000px;
+    min-width: 300px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+nav{
+    width: 100%;
+    height: 125px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand{
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--blue);
+}
+
+/*primeiro vou estilizar a lista: quero flex na forma de linha*/
+nav ul {
+    display: flex;
+    flex-direction: row;
+
+}
+
+/*aí depois especifico que quero estilizar os itens da lista*/
+nav ul li{
+    list-style: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/*agora é hora de customizar os links do menu*/
+nav ul li a{
+    text-decoration: none;
+    color: var(--blue);
+}
+
+/*indicando uma ação para quando o mouse passar no link - usar : depois do item indica ação*/
+nav ul li a:hover{
+color:#00285f83
+}
+
+nav ul button{
+    border: 1px solid var(--blue);
+    background: transparent;
+    padding: 8px 40px;
+    cursor: pointer;
+    margin-left:30px ;
+    color: var(--blue);
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+nav ul button:hover{
+    transition: background, color 0.6s; /*vai sair da cor do background (blue) pro branco em 0.6s milisegundos*/
+    background: var(--blue);
+    color: white;
+}
+
+/*hora de estilizar elementos dentro do content*/
+.content .header-block {
+max-width: 1000px;
+min-width: 300px;
+height: 450px;
+background: var(--blue);
+border-radius: 8px;
+box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.5); /*no rgba, os 3 primeiros valores são cores e o último é a transparência*/
+/*agora é hora de garantir compabitibilidade com navegadores*/
+-webkit-box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.5);/*Explorer*/
+-moz-box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.5); /*Mozilla*/
+
+position: relative; /*tudo dentro do bloco vai ser absolute, então deixei esse relative*/
+}
+
+.header-block .text{
+    position: absolute;
+    bottom: 30%;
+    left: 15%;
+    color: white;
+}
+.header-block .text .h2{
+    color: white;
+    margin-bottom: 20px;
+    text-align: right;
+    transform: translateX(-40px); /*efeito pro texto andar horizontalmente quando entra na página*/
+    transition: transform 0.5s; /*isso complementa o transform*/
+}
+.header-block .text p{
+    max-width: 280px;
+    color: white;
+    text-align: right;
+    transform: translateX(-40px);
+    transition: transform 0.5s
+}
+
+/*img não tem dot antes porque é nativo*/
+.header-block img{
+    position: absolute;
+    width: 50%;
+    
+    right: 2%;
+    bottom: 2%;
+    
+}
+
+/*catálogo*/
+section .catalog {
+    width: 100%;
+    padding: 100px;
+    /*não vai ter altura*/
+}
+
+
+section .filter-card{
+    width:1000px;
+    height: 150px;
+    background: var(--gray);
+    border-radius: 8px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-input {
+    width: 700px;
+    height: 50px;
+    border: none;
+    border-radius: 4px 0px 0px 4px;
+    text-indent: 10px;
+}
+
+.search-button {
+    width: 150px;
+    height: 50px;
+    border-radius: 0px 4px 4px 0px;
+    border: none;
+    background: var(--blue);
+    color: white;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: 0.2s ease;
+}
+
+.search-button:hover{
+    background: var(--gray);
+    color:var(--blue)
+}
+
+.title-wrapper-catalog{
+    margin-top:200px;
+    padding-bottom: 20px;
+}
+
+/*aqui é o grid de carros (notar que não ponto antes do "section"*/
+section .card-wrapper {
+max-width: 1000px;
+height: 100%;
+display: grid; /*essa é a sacada pra simplificar a distribuição dos itens*/
+grid-template-columns: repeat(auto-fill, minmax(270px,1fr)); /*largura 270px e uma fração*/
+grid-gap:30px;/*espaço entre o meu grid*/
+padding-top: 50px;
+}
+
+section .card-item {
+height: 300px;
+background: var(--gray);
+border-radius: 8px;
+flex-direction: column;
+justify-content: space-around;
+display: flex;
+align-items: center;
+}
+
+.card-content{
+height: 40%;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-around;
+}
+
+.card-item img{
+    width: 85%;
+}
+
+.card-item p{
+    width: 90%;
+    color: #000;
+}
+
+.card-item button{
+    width: 90%;
+    padding: 15px 0px;
+    border: none;
+    background: var(--blue) ;
+    border-radius: 4px;
+    color:white;
+    font-weight: bold;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.card-item button:hover{
+    
+    background: var(--gray);
+    color: var(--blue);
+}
