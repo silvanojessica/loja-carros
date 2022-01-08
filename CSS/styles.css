@@ -1,12 +1,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-/*procurar fonte desejada, clicar em "select this style" e depois selecionar a opção [x]IMPORT [] link 
-e copiar o import na caixinha que vai abrir*/
+
 
 
 /*resetando regras do CSS*/
-/*começar resetando configurações pré-estabelecidas
-antes de customizar, só com HTML puro, já tem padding, margin etc, então iremos redefinir usando o seletor * */
+
 
 * {
     margin:0px;
@@ -15,11 +13,11 @@ antes de customizar, só com HTML puro, já tem padding, margin etc, então irem
     outline: none;
     padding-left: 30px;
     font-family: "Roboto", sans-serif;
-    /*ctrl + / comenta */
+  
 
 }
 
-/*definindo cores pra usar em qualquer lugar*/
+
 :root {
     --orange:#f78b00;
     --blue:#00285f;
@@ -34,14 +32,12 @@ html, body{
 
 header{
 width: 100%;
-height: 500px; /*heigh (altura) é px ; widht (largura) é %) */
+height: 500px; 
 background: var(--orange);
 border-radius: 8px;
 }
 
-/*abordagem responsiva: 
-se tiver espaço, vai ocupar o máximo/ se não tiver, ocupa o mínimo;
-é uma abordagem chamada mobile first*/
+/*abordagem mobile first*/
 .content {
     max-width: 1000px;
     min-width: 300px;
@@ -143,7 +139,7 @@ position: relative; /*tudo dentro do bloco vai ser absolute, então deixei esse 
     transition: transform 0.5s
 }
 
-/*img não tem dot antes porque é nativo*/
+
 .header-block img{
     position: absolute;
     width: 50%;
@@ -203,7 +199,7 @@ section .filter-card{
     padding-bottom: 20px;
 }
 
-/*aqui é o grid de carros (notar que não ponto antes do "section"*/
+
 section .card-wrapper {
 max-width: 1000px;
 height: 100%;
