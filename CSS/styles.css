@@ -11,7 +11,7 @@
     padding: 0px;
     box-sizing: border-box;
     outline: none;
-    padding-left: 30px;
+    justify-content: center;
     font-family: "Roboto", sans-serif;
   
 
@@ -27,6 +27,7 @@
 
 html, body{
     width: 100%;
+    
     overflow-x: hidden; /*isso faz sumir a barra de rolagem horizontal*/
 }
 
@@ -45,12 +46,14 @@ border-radius: 8px;
     display: flex;
     flex-direction: column;
     padding: 10px;
+    
 }
 
 nav{
     width: 100%;
     height: 125px;
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
 }
@@ -109,13 +112,13 @@ max-width: 1000px;
 min-width: 300px;
 height: 450px;
 background: var(--blue);
+padding: 10px;
 border-radius: 8px;
 box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.5); /*no rgba, os 3 primeiros valores são cores e o último é a transparência*/
 /*agora é hora de garantir compabitibilidade com navegadores*/
 -webkit-box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.5);/*Explorer*/
 -moz-box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.5); /*Mozilla*/
-
-position: relative; /*tudo dentro do bloco vai ser absolute, então deixei esse relative*/
+ /*tudo dentro do bloco vai ser absolute, então deixei esse relative*/
 }
 
 .header-block .text{
@@ -123,12 +126,12 @@ position: relative; /*tudo dentro do bloco vai ser absolute, então deixei esse 
     bottom: 30%;
     left: 15%;
     color: white;
-    text-align: right;
+    
 }
 .header-block .text .h2{
     color: white;
     margin-bottom: 20px;
-    text-align: left;
+    text-align: right;
     transform: translateX(-40px); /*efeito pro texto andar horizontalmente quando entra na página*/
     transition: transform 0.5s; /*isso complementa o transform*/
 }
@@ -144,7 +147,7 @@ position: relative; /*tudo dentro do bloco vai ser absolute, então deixei esse 
 .header-block img{
     position: absolute;
     width: 50%;
-    
+     
     right: 2%;
     bottom: 2%;
     
@@ -152,14 +155,13 @@ position: relative; /*tudo dentro do bloco vai ser absolute, então deixei esse 
 
 /*catálogo*/
 section .catalog {
-    width: 100%;
+    width: 100vw;
     padding: 100px;
-    /*não vai ter altura*/
 }
 
 
 section .filter-card{
-    width:1000px;
+    width: 980px;px;
     height: 150px;
     background: var(--gray);
     border-radius: 8px;
@@ -168,6 +170,7 @@ section .filter-card{
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    
 }
 
 .search-input {
@@ -257,21 +260,21 @@ justify-content: space-around;
     color: var(--blue);
 }
 
-section .about-content{
+.about-content{
     background-color: var(--gray);
-    width: 1000px;
-    justify-content: space-between;
+    display: flex;
+    justify-content:space-between;
     border-radius: 8px;
     flex-direction: row;
     align-items: center;
-    padding-left: 130px;
-    position: absolute;
     height: 600px;
     max-width: 1000px;
   min-width: 300px;
   z-index: 10;
   padding: 10px;
-  display: flex;
+  margin: 0 auto;
+  position: relative;
+  
 }
 
 section .left img{
@@ -286,8 +289,8 @@ section .right{
         height: 100px;
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
+        align-items:flex-start;
+        justify-content: center;
         padding-top: 10%;
       
 }
@@ -303,6 +306,7 @@ section .right h3 {
     text-align: right;
     width: 90%;
     margin-bottom: 20px;
+    align-items: center;
   }
   
   section .right p {
@@ -312,3 +316,76 @@ section .right h3 {
     text-align: right;
     color: rgba(0, 0, 0, 0.4);
   }
+
+  footer {
+    width: 100%;
+    height: 250px;
+  }
+  
+  footer .main {
+    width: 100%;
+    height: 200px;
+    background: var(--orange);
+    padding: 20px 10px;
+  }
+  
+  .footer-links {
+    max-width: 1000px;
+    min-width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .footer-company,
+  .footer-rental,
+  .footer-contact,
+  .footer-social {
+    color: white;
+    height: 100%;
+    min-height: 100px;
+  }
+  
+  .footer-links h4 {
+    margin-bottom: 10px;
+  }
+  
+  .footer-links {
+    margin-bottom: 8px;
+  }
+  
+  .main .footer-social img {
+    width: 32px;
+    height: 32px;
+  }
+  
+  footer .last {
+    width: 100%;
+    height: 50px;
+    background: var(--blue);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Ajustes de responsividade */
+  
+  @media (max-width: 576px) {
+    nav ul li {
+      display: none;
+    }
+    footer {
+        height: 100%;
+      }
+    
+      footer .main {
+        height: 100%;
+      }
+    
+      .footer-links {
+        flex-direction: column;
+        padding-left: 10%;
+      }
+    }
